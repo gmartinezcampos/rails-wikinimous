@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="container">
+  <h1 class="header_index">Daily Articles</h1>
+    <ul class="list-group">
+      <% @articles.each do |article| %>
+      <li class="list-group-item">
+        <h2 id="article-title"><%= link_to article.title, article_path(article) %></h2>
+        <p><em><%= article.content %></em></p>
+        <%= link_to "delete", article_path(article), method: "delete", data: {confirm: "Are you sure you want to delete?"} %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

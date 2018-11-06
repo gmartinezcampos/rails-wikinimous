@@ -4,12 +4,20 @@
     <title>RailsWikinimous</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav class="navbar sticky-top navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <%= image_tag "logo_2.png", width: 50, height: 50, class: "d-inline-block align-top" %>
+        Galaxy News
+      </a>
+
+    </nav>
     <%= yield %>
   </body>
 </html>
